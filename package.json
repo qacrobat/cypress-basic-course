@@ -1,0 +1,23 @@
+{
+  "name": "cypress-basic-course",
+  "version": "1.0.0",
+  "description": "Basic course of test automation with Cypress from the Talking About Testing school.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qacrobat/cypress-basic-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qacrobat/cypress-basic-course/issues"
+  },
+  "homepage": "https://github.com/qacrobat/cypress-basic-course#readme",
+  "devDependencies": {
+    "cypress": "^10.11.0"
+  }
+}
