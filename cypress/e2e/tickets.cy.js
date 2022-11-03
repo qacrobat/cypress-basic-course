@@ -14,8 +14,12 @@ describe('Ticketbox', () => {
     cy.get('#signature').type(`${firstName} ${lastName}`)
   })
 
-  it('select two tickets', () =>{
+  it('select two tickets', () => {
     cy.get('#ticket-quantity').select("2")
 
+  })
+
+  it.only('select the VIP ticket type', () => {
+    cy.get('#vip').check()
   })
 })
