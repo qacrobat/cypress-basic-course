@@ -27,10 +27,9 @@ describe('Ticketbox', () => {
     cy.get('#social-media').check()
   })
 
-  it.only('checks friend and publication, then unchecks friend', () => {
+  it('checks friend and publication, then unchecks friend', () => {
     cy.get('#friend').check()
     cy.get('#publication').check()
     cy.get('#friend').uncheck()
-
   })
 })
