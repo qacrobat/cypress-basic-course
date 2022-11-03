@@ -13,4 +13,9 @@ describe('Ticketbox', () => {
     cy.get('#requests').type('IPA beer')
     cy.get('#signature').type(`${firstName} ${lastName}`)
   })
+
+  it('select two tickets', () =>{
+    cy.get('#ticket-quantity').select("2")
+
+  })
 })
