@@ -32,4 +32,10 @@ describe('Ticketbox', () => {
     cy.get('#publication').check()
     cy.get('#friend').uncheck()
   })
+
+  it('resets the form after filling the first name', () => {
+    cy.get('#first-name').type('David')
+    cy.get('.reset').click()
+
+  })
 })
