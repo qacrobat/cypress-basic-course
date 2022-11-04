@@ -47,7 +47,7 @@ describe('Ticketbox', () => {
     cy.get('h1').should('contain', 'TICKETBOX')
   })
 
-  it.only('successfully submits the form', () => {
+  it('successfully submits the form', () => {
     const firstName = 'John'
     const lastName = 'Doe'  
     const fullName = `${firstName} ${lastName}`
@@ -65,6 +65,19 @@ describe('Ticketbox', () => {
     cy.get('#requests').type('IPA beer')
     cy.get('#agree').click()
     cy.get('#signature').type(`${fullName}`)
+    cy.contains('Confirm Tickets').click()
+
+    cy.get('.success').should('contain', 'Ticket(s) successfully ordered')
+  })
+
+  it('successfully submits the form using a support command', () => {
+    const customer = {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'johndoe@example.com'  
+    }
+
+    cy.fillMandatoryFields(customer)
     cy.contains('Confirm Tickets').click()
 
     cy.get('.success').should('contain', 'Ticket(s) successfully ordered')
